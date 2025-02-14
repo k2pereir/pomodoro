@@ -1,0 +1,17 @@
+#page {
+    background-color: rgb(210, 145, 188);
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+#time {
+    position: absolute; 
+    padding-top: 10%; 
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+    color: rgb(236, 228, 213);
+    cursor: pointer;
+    font-weight: bold; 
+}

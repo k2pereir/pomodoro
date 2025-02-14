@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pomodoro</title>
+        <link rel="stylesheet" href='style.css'>
+    </head>
+    <body id="page">
+        <h1 style="text-align: center; color: rgb(236, 228, 213)">Get to work!</h1>
+        <a id='time'>Work</a>
+        <script>
+            function startCountdown(duration) {
+                let remaining = duration; 
+                const timeElement = document.getElementById('time');
+                const countdown = setInterval(function() {
+                    let minutes = Math.floor(remaining / 60);
+                    let seconds = remaining % 60;
+                    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+                    timeElement.innerHTML = `${minutes}:${seconds}`;
+
+                    if (remaining <= 0) {
+                        clearInterval(countdown);
+                        timeElement.innerHTML = 'Work block over!';
+                    }
+                    remaining--; 
+                }, 1000); 
+            }
+            document.getElementById('time').addEventListener('click', function() {
+                startCountdown(25 * 60); 
+            });
+        </script>
+    </body>
+</html>
