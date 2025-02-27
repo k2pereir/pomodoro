@@ -5,12 +5,13 @@
     width: 100%;
 }
 
-#time {
-    position: absolute; 
-    padding-top: 10%; 
+#work {
+    margin-top: 10%; 
+    margin-left: 45%; 
+    margin-right: 45%; 
+    display: flex; 
+    justify-content: center;
     font-size: 60px;
-    text-align: center;
-    width: 100%;
     color: rgb(236, 228, 213);
     cursor: pointer;
     font-weight: bold; 

@@ -8,11 +8,11 @@
     </head>
     <body id="page">
         <h1 style="text-align: center; color: rgb(236, 228, 213)">Get to work!</h1>
-        <a id='time'>Work</a>
+        <a id='work'>Work</a>
         <script>
             function startCountdown(duration) {
                 let remaining = duration; 
-                const timeElement = document.getElementById('time');
+                const timeElement = document.getElementById('work');
                 const countdown = setInterval(function() {
                     let minutes = Math.floor(remaining / 60);
                     let seconds = remaining % 60;
@@ -24,10 +24,10 @@
                         clearInterval(countdown);
                         timeElement.innerHTML = 'Work block over!';
                     }
-                    remaining--; 
+                    remaining = remaining -1; 
                 }, 1000); 
             }
-            document.getElementById('time').addEventListener('click', function() {
+            document.getElementById('work').addEventListener('click', function() {
                 startCountdown(25 * 60); 
             });
         </script>
